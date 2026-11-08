@@ -1,0 +1,26 @@
+{
+    "name": "neon/neon-components",
+    "type": "typo3-cms-extension",
+    "description": "Example site package with components",
+    "homepage": "https://docs.typo3.org/permalink/t3sitepackage:start",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "typo3/cms-core": "^14.3",
+        "typo3/cms-rte-ckeditor": "^14.3",
+        "typo3/cms-fluid-styled-content": "^14.3"
+    },
+    "suggest": {
+        "friendsoftypo3/content-blocks": "Allows to create custom content elements. "
+    },
+    "autoload": {
+        "psr-4": {
+            "Neon\\NeonComponents\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "neon_components"
+        }
+    }
+}
