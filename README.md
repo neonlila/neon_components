@@ -39,10 +39,6 @@ Usage
 Include the `neon_components` TypoScript set or site set in your root page or site configuration so component settings, paths, and rendering definitions are loaded.
 2. Render Components in Fluid
 Include or render component partials/templates from your site package or page templates:
-```html
-<!-- Example Fluid usage — adjust partial name and arguments to match your components -->
-<f:render partial="ComponentName" arguments="{data: data, settings: settings}" />
-```
 3. Map Content Elements / Backend Usage
 Assign the components to your content elements, backend layouts, or site package templates according to your TYPO3 v14.3 site setup, then clear caches so TCA, TypoScript, and Fluid template caches are rebuilt.
 Development
