@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:ui="http://typo3.org/ns/Neon/NeonComponents/Components"
+      data-namespace-typo3-fluid="true">
+      
+<f:argument name="panels" type="iterable" />
+<f:argument name="openFirst" type="boolean" optional="true" default="false" />
+
+<f:asset.css identifier="neon_cb_frontend" href="EXT:neon_components/Resources/Public/Css/blocks.css" />
+
+<f:if condition="{panels}">
+    <div class="accordion">
+        <f:for each="{panels}" as="panel" iteration="iterator">
+            <details class="accordion__item" {f:if(condition: '{openFirst} && {iterator.isFirst}', then: 'open')}>
+                <summary class="accordion__trigger">
+                    <span>{panel.title}</span>
+                </summary>
+                <div class="accordion__panel">
+                    <f:if condition="{panel.text}">
+                        <f:format.raw>{panel.text}</f:format.raw>
+                    </f:if>
+
+                    <f:if condition="{panel.list_items}">
+                        <ui:molecule.list
+                            items="{panel.list_items}"
+                            ordered="{panel.list_ordered as boolean}" />
+                    </f:if>
+
+                    <f:if condition="{panel.button_label} && {panel.button_link.url}">
+                        <p>
+                            <ui:atom.button
+                                label="{panel.button_label}"
+                                url="{panel.button_link.url}"
+                                variant="{panel.button_variant ?: 'primary'}" />
+                        </p>
+                    </f:if>
+                </div>
+            </details>
+        </f:for>
+    </div>
+</f:if>
+</html>

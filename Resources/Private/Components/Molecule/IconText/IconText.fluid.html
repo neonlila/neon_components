@@ -1,0 +1,45 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:argument name="piFlexform" type="mixed" optional="{true}" />
+<f:argument name="iconAlignment" type="mixed" optional="{true}" />
+<f:argument name="rowItems" type="mixed" optional="{true}" />
+<f:argument name="items" type="mixed" optional="{true}" />
+<f:argument name="iconTitle" type="string" optional="{true}" />
+<f:argument name="iconPosition" type="string" optional="{true}" />
+<f:argument name="iconIcon" type="string" optional="{true}" />
+<f:argument name="iconBodytext" type="string" optional="{true}" />
+<f:argument name="iconLink" type="string" optional="{true}" />
+<f:argument name="linkTitle" type="string" optional="{true}" />
+
+
+<div class="cb-icon-group">
+    <div class="icongroup icongroup-align-{piFlexform.iconAlignment} icongroup-columns-{piFlexform.sheets.sDEF.row_items} icongroup-iconposition-{piFlexform.iconPosition}">
+        <f:for each="{items}" as="item" iteration="iteration">
+            <div class="icongroup-item">
+                <f:if condition="{item.iconIcon}">
+                    <div class="icongroup-item-icon">
+                        <f:image image="{item.iconIcon.0}" height="50"/>
+                    </div>
+                </f:if>
+                <div class="icongroup-item-text">
+                    <h4 class="icongroup-item-text-header">
+                        <f:if condition="{iconLink}">
+                            <f:then>
+                                <f:link.typolink parameter="{item.iconLink}" title="{item.linkTitle -> f:format.trim()}">
+                                    <h4>{item.iconTitle}</h4>
+                                </f:link.typolink>
+                            </f:then>
+                            <f:else>
+                                <h4>{item.iconTitle}</h4>
+                            </f:else>
+                        </f:if>
+                    </h4>
+                    <f:if condition="{item.iconBodytext}">
+                        <f:format.html>{item.iconBodytext}</f:format.html>
+                    </f:if>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</div>

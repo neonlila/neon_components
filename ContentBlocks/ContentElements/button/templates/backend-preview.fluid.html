@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Preview" />
+
+<f:section name="Content">
+
+<div class="cb-tm-preview">
+    <p class="cb-tm-preview__meta">
+      <span class="cb-tm-preview__badge">
+        <f:if condition="{data.buttonText}" then="Basics & Text" else="Grid" />
+      </span>
+    </p>
+    <ul class="cb-tm-preview__list">
+        <li class="cb-tm-preview__item">
+            <span class="cb-tm-preview__text">
+                <strong>{data.buttonText}</strong>
+                    <f:if condition="{item.testCompany}">
+                        <span class="cb-tm-preview__company">· {data.iconVariant}</span>
+                    </f:if>
+                <span class="cb-tm-preview__comment">{data.buttonVariant}</span>
+            </span>
+        </li>
+    </ul>
+</div>
+
+</f:section>
+
+</html>

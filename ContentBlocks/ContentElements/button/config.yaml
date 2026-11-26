@@ -1,0 +1,16 @@
+name: neon/button
+typeName: button
+group: Components
+prefixFields: true
+prefixType: full
+fields:
+  - identifier: buttonSettings
+    type: Tab
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/button-element/language/labels.xlf:buttonSettings
+  - identifier: neon/button-fields
+    type: Basic
+  - identifier: iconSettings
+    type: Tab
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/button-element/language/labels.xlf:iconSettings
+  - identifier: neon/icon-field
+    type: Basic  

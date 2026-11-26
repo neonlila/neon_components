@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" date="2026-11-26T20:14:50+00:00" product-name="neon/advanced-card">
+    <header/>
+    <body>
+      <trans-unit id="title">
+        <source>Advanced Card</source>
+      </trans-unit>
+      <trans-unit id="description">
+        <source>Advanced card elements with options</source>
+      </trans-unit>
+      <trans-unit id="cardTitle.label">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="cardImage.label">
+        <source>Image</source>
+      </trans-unit>
+      <trans-unit id="cardText.label">
+        <source>Text</source>
+      </trans-unit>
+      <trans-unit id="cardImageBorder.label">
+        <source>Card Image border</source>
+      </trans-unit>
+      <trans-unit id="cardImageBorder.items.card-img-top.label">
+        <source>Image border top</source>
+      </trans-unit>
+      <trans-unit id="cardImageBorder.items.card-img-bottom.label">
+        <source>Image border bottom</source>
+      </trans-unit>
+      <trans-unit id="cardImageBorder.items.card-img-top card-img-bottom.label">
+        <source>Image border top/bottom</source>
+      </trans-unit>
+      <trans-unit id="cardImageWidth.label">
+        <source>Card image width</source>
+      </trans-unit>
+      <trans-unit id="cardImageWidth.items.500.label">
+        <source>Small (500px)</source>
+      </trans-unit>
+      <trans-unit id="cardImageWidth.items.800.label">
+        <source>Medium (800px)</source>
+      </trans-unit>
+      <trans-unit id="cardImageWidth.items.1200.label">
+        <source>Large (1200px)</source>
+      </trans-unit>
+      <trans-unit id="colorPicker.label">
+        <source>Color / background</source>
+      </trans-unit>
+      <trans-unit id="colorPicker.items.none.label">
+        <source>None</source>
+      </trans-unit>
+      <trans-unit id="colorPicker.items.text-bg-primary.label">
+        <source>Main color</source>
+      </trans-unit>
+      <trans-unit id="colorPicker.items.text-bg-secondary.label">
+        <source>Second color</source>
+      </trans-unit>
+      <trans-unit id="colorPicker.items.text-bg-success.label">
+        <source>Green</source>
+      </trans-unit>
+      <trans-unit id="colorPicker.items.text-bg-light.label">
+        <source>White</source>
+      </trans-unit>
+      <trans-unit id="colorPicker.items.text-bg-dark.label">
+        <source>Black</source>
+      </trans-unit>
+      <trans-unit id="buttonText.label">
+        <source>Button Text</source>
+      </trans-unit>
+      <trans-unit id="buttonText.description">
+        <source>Display text of a button</source>
+      </trans-unit>
+      <trans-unit id="buttonLink.label">
+        <source>Button Link / Target</source>
+      </trans-unit>
+      <trans-unit id="buttonLink.description">
+        <source>Link of the button</source>
+      </trans-unit>
+      <trans-unit id="buttonVariant.label">
+        <source>Button Color</source>
+      </trans-unit>
+      <trans-unit id="buttonVariant.description">
+        <source>Preset button variant</source>
+      </trans-unit>
+      <trans-unit id="buttonVariant.items.primary.label">
+        <source>Primary</source>
+      </trans-unit>
+      <trans-unit id="buttonVariant.items.secondary.label">
+        <source>Secondary</source>
+      </trans-unit>
+      <trans-unit id="buttonVariant.items.outline-primary.label">
+        <source>Outline</source>
+      </trans-unit>
+      <trans-unit id="buttonSize.label">
+        <source>Button Size</source>
+      </trans-unit>
+      <trans-unit id="buttonSize.description">
+        <source>Preset button size</source>
+      </trans-unit>
+      <trans-unit id="buttonSize.items.lg.label">
+        <source>Large</source>
+      </trans-unit>
+      <trans-unit id="buttonSize.items.sm.label">
+        <source>Small</source>
+      </trans-unit>
+      <trans-unit id="list_items.label">
+        <source>List items</source>
+      </trans-unit>
+      <trans-unit id="list_items.listText.label">
+        <source>List item</source>
+      </trans-unit>
+      <trans-unit id="cardGeneral">
+        <source>General</source>
+      </trans-unit>
+      <trans-unit id="advancedContent">
+        <source>Content</source>
+      </trans-unit>
+      <trans-unit id="advancedLink">
+        <source>Extras</source>
+      </trans-unit>
+      <trans-unit id="advancedColor">
+        <source>Background color</source>
+      </trans-unit>
+      <trans-unit id="advancedButton">
+        <source>Button</source>
+      </trans-unit>
+      <trans-unit id="advancedList">
+        <source>List</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

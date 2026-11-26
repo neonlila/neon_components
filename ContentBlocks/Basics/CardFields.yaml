@@ -1,0 +1,44 @@
+identifier: neon/card-fields
+fields:
+  - identifier: header
+    useExistingField: true
+  - identifier: cardTitle
+    type: Text
+    label: "Title"
+    required: true   
+  - type: Linebreak  
+  - identifier: cardImage
+    type: File
+    label: "Image"
+    allowed: common-image-types
+    maxitems: 1
+  - type: Linebreak
+  - identifier: cardText
+    type: Textarea
+    label: "Text"
+    enableRichtext: true
+  - type: Linebreak
+  - identifier: cardImageBorder
+    label: "Card Image border"
+    type: Select
+    renderType: selectSingle
+    default: "card-img-top"
+    items:
+      - label: "Image border top"
+        value: "card-img-top"
+      - label: "Image border bottom"
+        value: "card-img-bottom" 
+      - label: "Image border top/bottom"
+        value: "card-img-top card-img-bottom"  
+  - identifier: cardImageWidth
+    label: "Card image width"
+    type: Select
+    renderType: selectSingle
+    default: "800"
+    items:
+      - label: "Small (500px)"
+        value: "500"
+      - label: "Medium (800px)"
+        value: "800"
+      - label: "Large (1200px)"
+        value: "1200"  

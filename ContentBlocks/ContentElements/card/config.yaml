@@ -1,0 +1,40 @@
+name: neon/card
+typeName: card
+group: Components
+prefixFields: true
+prefixType: full
+fields:
+  - identifier: cardGeneral    
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/card-element/language/labels.xlf:cardGeneral
+    type: Tab  
+  - identifier: cardContent
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/card-element/language/labels.xlf:cardContent
+    type: Palette    
+    fields:
+      - identifier: neon/card-fields   
+        type: Basic
+      - identifier: cardVariant
+        label: LLL:EXT:neon_components/ContentBlocks/ContentElements/card-element/language/labels.xlf:cardVariant
+        type: Select
+        renderType: selectSingle
+        items: 
+          - label: 'Minimal'
+            value: "minimal"
+          - label: "Full"
+            value: "full"
+  - identifier: cardLink
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/card-element/language/labels.xlf:cardLink
+    type: Tab    
+  - identifier: cardButton
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/card-element/language/labels.xlf:cardButton    
+    type: Palette
+    fields:
+      - identifier: neon/button-fields
+        type: Basic
+  - identifier: cardList
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/card-element/language/labels.xlf:cardList
+    type: Palette
+    fields:
+      - identifier: neon/list-field
+        type: Basic  
+  

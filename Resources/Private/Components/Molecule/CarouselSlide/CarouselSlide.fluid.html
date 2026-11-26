@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:argument name="variant" type="string" optional="{true}" default="card" />
+<f:argument name="image" type="mixed" optional="{true}" />
+<f:argument name="imageWidth" type="string" optional="{true}" default="800c" />
+<f:argument name="imageHeight" type="string" optional="{true}" default="500c" />
+<f:argument name="eager" type="bool" optional="{true}" default="{false}" />
+<f:argument name="headline" type="string" optional="{true}" />
+<f:argument name="text" type="string" optional="{true}" />
+<f:argument name="buttonText" type="string" optional="{true}" />
+<f:argument name="link" type="mixed" optional="{true}" />
+
+<article class="carousel-slide carousel-slide--{variant}">
+  <f:if condition="{image}">
+    <div class="carousel-slide__media">
+      <f:image image="{image}"
+               width="{imageWidth}"
+               height="{imageHeight}"
+               loading="{f:if(condition: eager, then: 'eager', else: 'lazy')}" />
+    </div>
+  </f:if>
+
+  <f:if condition="{headline} || {text} || {link.url}">
+    <div class="carousel-slide__content">
+      <f:if condition="{headline}">
+        <h3 class="carousel-slide__title">{headline}</h3>
+      </f:if>
+      <f:if condition="{text}">
+        <p class="carousel-slide__text">{text}</p>
+      </f:if>
+      <f:if condition="{link.url}">
+        <f:link.typolink parameter="{link}" class="carousel-slide__button">
+          {f:if(condition: buttonText, then: buttonText, else: 'Learn more')}
+        </f:link.typolink>
+      </f:if>
+    </div>
+  </f:if>
+</article>
+
+</html>

@@ -1,0 +1,88 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:ui="http://typo3.org/ns/Neon/NeonComponents/Components"
+      data-namespace-typo3-fluid="true">
+
+<f:argument name="id" type="string" />
+<f:argument name="items" type="mixed" optional="{true}" />
+<f:argument name="type" type="string" optional="{true}" default="fullwidth" />
+<f:argument name="label" type="string" optional="{true}" default="Slider" />
+
+<f:asset.css identifier="swiper" href="EXT:neon_components/Resources/Public/Vendor/Swiper/swiper-bundle.min.css" />
+<f:asset.css identifier="carousel" href="EXT:neon_components/Resources/Public/Css/Components/Carousel.css" />
+<f:asset.script identifier="swiper" src="EXT:neon_components/Resources/Public/Vendor/Swiper/swiper-bundle.min.js" defer="1" />
+<f:asset.script identifier="carousel" src="EXT:neon_components/Resources/Public/JavaScript/Components/Carousel.js" defer="1" />
+
+<f:if condition="{items -> f:count()}">
+  <section class="carousel carousel--{type}" id="{id}" aria-label="{label}" data-carousel="{type}">
+    <div class="carousel__main swiper">
+      <div class="swiper-wrapper">
+        <f:for each="{items}" as="item" iteration="i">
+          <div class="swiper-slide">
+            <f:switch expression="{type}">
+              <f:case value="multi">
+                <ui:molecule.carouselSlide
+                    variant="card"
+                    image="{item.slideImage}"
+                    imageWidth="800c"
+                    imageHeight="500c"
+                    headline="{item.slideHeadline}"
+                    text="{item.slideText}"
+                    buttonText="{item.slideButtonText}"
+                    link="{item.slideLink}"
+                />
+              </f:case>
+              <f:case value="thumbs">
+                <ui:molecule.carouselSlide
+                    variant="gallery"
+                    image="{item.slideImage}"
+                    imageWidth="1600c"
+                    imageHeight="900c"
+                    eager="{i.isFirst}"
+                    headline="{item.slideHeadline}"
+                    text="{item.slideText}"
+                    buttonText="{item.slideButtonText}"
+                    link="{item.slideLink}"
+                />
+              </f:case>
+              <f:defaultCase>
+                <ui:molecule.carouselSlide
+                    variant="hero"
+                    image="{item.slideImage}"
+                    imageWidth="1920c"
+                    imageHeight="900c"
+                    eager="{i.isFirst}"
+                    headline="{item.slideHeadline}"
+                    text="{item.slideText}"
+                    buttonText="{item.slideButtonText}"
+                    link="{item.slideLink}"
+                />
+              </f:defaultCase>
+            </f:switch>
+          </div>
+        </f:for>
+      </div>
+
+      <f:if condition="{type} != 'thumbs'">
+        <div class="swiper-pagination"></div>
+      </f:if>
+      <button class="swiper-button-prev" type="button"></button>
+      <button class="swiper-button-next" type="button"></button>
+    </div>
+
+    <f:if condition="{type} == 'thumbs'">
+      <div class="carousel__thumbs swiper" aria-hidden="true">
+        <div class="swiper-wrapper">
+          <f:for each="{items}" as="item">
+            <div class="swiper-slide">
+              <f:if condition="{item.slideImage}">
+                <f:image image="{item.slideImage}" width="240c" height="160c" alt="" loading="lazy" />
+              </f:if>
+            </div>
+          </f:for>
+        </div>
+      </div>
+    </f:if>
+  </section>
+</f:if>
+
+</html>

@@ -1,0 +1,45 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Preview" />
+
+<f:section name="Content">
+
+  <f:variable name="count" value="{data.accordion_items -> f:count()}" />
+
+  <div class="cb-tm-preview">
+    <p class="cb-tm-preview__meta">
+      <span class="cb-tm-preview__badge">
+        <f:if condition="{data.testSlider}" then="Slider" else="Grid" />
+      </span>
+      {count} <f:if condition="{count} == 1" then="tab" else="tabs" />
+    </p>
+
+    <f:if condition="{count}">
+      <f:then>
+            <ul class="cb-tm-preview__list">
+            <f:for each="{data.accordion_items}" as="item" iteration="i">
+                <f:if condition="{i.index} < 4">
+                <li class="cb-tm-preview__item">
+                    <span class="cb-tm-preview__text">
+                    <strong>{item.accordionHeadline}</strong>
+                    <span class="cb-tm-preview__comment">„{item.accordionContent -> f:format.stripTags()}“</span>
+                    </span>
+                </li>
+                </f:if>
+            </f:for>
+            </ul>
+
+        <f:if condition="{count} > 4">
+          <p class="cb-tm-preview__more">+ {count - 4} more</p>
+        </f:if>
+      </f:then>
+      <f:else>
+        <p class="cb-tm-preview__empty">No tabs added yet.</p>
+      </f:else>
+    </f:if>
+  </div>
+</f:section>
+
+</html>

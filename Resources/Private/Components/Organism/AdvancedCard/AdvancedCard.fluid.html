@@ -1,0 +1,48 @@
+    <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:ui="http://typo3.org/ns/Neon/NeonComponents/Components"
+      data-namespace-typo3-fluid="true">
+    
+    <!-- arguments-->
+    <f:argument name="cardTitle" type="string"  optional="{false}"/>
+    <f:argument name="cardText" type="string" optional="{true}" />
+    <f:argument name="cardImage" type="mixed" optional="{true}" />
+    <f:argument name="cardImageBorder" type="string" optional="{true}" default="card-img-top"/>
+    <f:argument name="cardImageWidth" type="string" optional="{true}" />
+    <f:argument name="buttonText" type="string" optional="{true}" />
+    <f:argument name="buttonLink" type="mixed" optional="{true}" />
+    <f:argument name="buttonVariant" type="string" optional="{true}" default="primary" />
+    <f:argument name="buttonSize" type="string" optional="{true}" default="sm" />
+    <f:argument name="colorPicker" type="string" optional="{true}" default="none"/>
+    <f:argument name="items" type="mixed" optional="{true}" />
+
+    <!-- card -->
+    <article class="card {colorPicker}">
+        <f:if condition="{cardImage}">
+            <f:image image="{cardImage}" class="{cardImageBorder}" width="{cardImageWidth}" alt="{cardTitle}" />
+        </f:if>
+
+        <div class="card-body">
+            <h3 class="card-title">{cardTitle}</h3>
+
+            <f:if condition="{cardText}">
+                <div class="card-text">
+                    <f:format.html>{cardText}</f:format.html>
+                </div>
+            </f:if>
+
+            <f:if condition="{items -> f:count()}">
+                <ul class="list-group list-group-flush">
+                    <ui:atom.list items="{data.list_items}" />
+                </ul>
+            </f:if>
+
+            <f:if condition="{buttonLink}">
+                <ui:atom.button
+                    buttonText="{buttonText}"
+                    buttonLink="{buttonLink}"
+                    buttonVariant="{buttonVariant}"
+                    buttonSize="{buttonSize}" />
+            </f:if>
+        </div>
+    </article>
+</html>

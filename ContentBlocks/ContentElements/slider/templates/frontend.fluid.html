@@ -1,0 +1,16 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:ui="http://typo3.org/ns/Neon/NeonComponents/Components"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{data.header}">
+  <h2 class="carousel-header">{data.header}</h2>
+</f:if>
+
+    <ui:organism.carousel
+        id="carousel-{data.uid}"
+        items="{data.slides}"
+        type="{data.sliderType}"
+        label="{f:if(condition: data.header, then: data.header, else: 'Slider')}"
+    />
+ 
+</html>

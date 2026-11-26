@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+    <f:argument name="buttonText" type="mixed" optional="{false}" default="Jetzt anfragen"/>
+    <f:argument name="buttonLink" type="mixed" optional="{false}" />
+    <f:argument name="buttonVariant" type="string" optional="{true}" default="primary" />
+    <f:argument name="buttonSize" type="string" optional="{true}" default="sm" />
+    <f:argument name="iconVariant" type="string" optional="{true}" default="none" />
+    <f:argument name="iconPosition" type="string" optional="{true}" default="after" />
+
+    <f:link.typolink parameter="{buttonLink}"
+                    class="btn btn-{buttonVariant} btn-{buttonSize} d-inline-flex align-items-center gap-2">
+
+        <f:if condition="{iconVariant} && {iconPosition} == 'before'">
+            <i class="bi bi-{iconVariant}" aria-hidden="true"></i>
+        </f:if>
+
+        <span>{buttonText}</span>
+
+        <f:if condition="{iconVariant} && {iconPosition} != 'before'">
+            <i class="bi bi-{iconVariant}" aria-hidden="true"></i>
+        </f:if>
+        
+    </f:link.typolink>
+
+</html>

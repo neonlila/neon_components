@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" date="2026-11-26T20:14:50+00:00" product-name="neon/slider">
+    <header/>
+    <body>
+      <trans-unit id="title">
+        <source>Slider</source>
+      </trans-unit>
+      <trans-unit id="description">
+        <source>Slide your images</source>
+      </trans-unit>
+      <trans-unit id="sliderType.label">
+        <source>Slider type</source>
+      </trans-unit>
+      <trans-unit id="sliderType.items.fullwidth.label">
+        <source>Full width slider</source>
+      </trans-unit>
+      <trans-unit id="sliderType.items.multi.label">
+        <source>Content slider (3 items)</source>
+      </trans-unit>
+      <trans-unit id="sliderType.items.thumbs.label">
+        <source>Thumbnail slider</source>
+      </trans-unit>
+      <trans-unit id="slides.label">
+        <source>Slides</source>
+      </trans-unit>
+      <trans-unit id="slides.slideImage.label">
+        <source>Image</source>
+      </trans-unit>
+      <trans-unit id="slides.slideImageAfter.label">
+        <source>After image (only for before / after)</source>
+      </trans-unit>
+      <trans-unit id="slides.slideImageAfter.description">
+        <source>The normal image is shown as &#039;before&#039;, this one as &#039;after&#039;. Use images with the same size and framing.</source>
+      </trans-unit>
+      <trans-unit id="slides.slideHeadline.label">
+        <source>Headline</source>
+      </trans-unit>
+      <trans-unit id="slides.slideText.label">
+        <source>Text</source>
+      </trans-unit>
+      <trans-unit id="slides.slideButtonText.label">
+        <source>Button text</source>
+      </trans-unit>
+      <trans-unit id="slides.slideLink.label">
+        <source>Button link</source>
+      </trans-unit>
+      <trans-unit id="slider_element">
+        <source>Slider content</source>
+      </trans-unit>
+      <trans-unit id="slider_items">
+        <source>Slider items</source>
+      </trans-unit>
+      <trans-unit id="slider_image">
+        <source>Slider images</source>
+      </trans-unit>
+      <trans-unit id="slider_headline">
+        <source>Slider headline</source>
+      </trans-unit>
+      <trans-unit id="slider_subheadline">
+        <source>Slider subheadline</source>
+      </trans-unit>
+      <trans-unit id="slider_button">
+        <source>Slider button link</source>
+      </trans-unit>
+      <trans-unit id="slider_buttontext">
+        <source>Slider button text</source>
+      </trans-unit>
+      <trans-unit id="slider_settings">
+        <source>Slider settings</source>
+      </trans-unit>
+      <trans-unit id="slider_count">
+        <source>Number of slides</source>
+      </trans-unit>
+      <trans-unit id="slider_speed">
+        <source>Animation speed</source>
+      </trans-unit>
+      <trans-unit id="slider_loop">
+        <source>Slider loop</source>
+      </trans-unit>
+      <trans-unit id="slider_navigation">
+        <source>Navigation</source>
+      </trans-unit>
+      <trans-unit id="slider_pagination">
+        <source>Pagination</source>
+      </trans-unit>
+      <trans-unit id="slider_paginationclick">
+        <source>Pagination is clickable</source>
+      </trans-unit>
+      <trans-unit id="slider_scroll">
+        <source>Scrollbar</source>
+      </trans-unit>
+      <trans-unit id="slider_lazy">
+        <source>Lazy loading</source>
+      </trans-unit>
+      <trans-unit id="slider_spacing">
+        <source>Slider Styling</source>
+      </trans-unit>
+      <trans-unit id="slider_space">
+        <source>Slides spacing</source>
+      </trans-unit>
+      <trans-unit id="slider_effects">
+        <source>Slide effects</source>
+      </trans-unit>
+      <trans-unit id="slider_default">
+        <source>None</source>
+      </trans-unit>
+      <trans-unit id="slider_fade">
+        <source>Fade effect</source>
+      </trans-unit>
+      <trans-unit id="slider_cube">
+        <source>Cube effect</source>
+      </trans-unit>
+      <trans-unit id="slider_coverflow">
+        <source>Coverflow effect</source>
+      </trans-unit>
+      <trans-unit id="slider_flip">
+        <source>Flip effect</source>
+      </trans-unit>
+      <trans-unit id="slider_center">
+        <source>Slider centered</source>
+      </trans-unit>
+      <trans-unit id="slider_extras">
+        <source>Slider extra settings</source>
+      </trans-unit>
+      <trans-unit id="slider_autoplay">
+        <source>Slider autoplay</source>
+      </trans-unit>
+      <trans-unit id="slider_autoplayint">
+        <source>Stop autoplay on interaction</source>
+      </trans-unit>
+      <trans-unit id="slider_autoplayprog">
+        <source>Autoplay progress</source>
+      </trans-unit>
+      <trans-unit id="slider_delay">
+        <source>Autoplay delay</source>
+      </trans-unit>
+      <trans-unit id="slider_general_tab">
+        <source>Content</source>
+      </trans-unit>
+      <trans-unit id="slider_content_tab">
+        <source>Content</source>
+      </trans-unit>
+      <trans-unit id="slider_setting_tab">
+        <source>Settings</source>
+      </trans-unit>
+      <trans-unit id="slider_styling_tab">
+        <source>Styling</source>
+      </trans-unit>
+      <trans-unit id="slider_extras_tab">
+        <source>Extras</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

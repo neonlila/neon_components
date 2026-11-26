@@ -1,0 +1,37 @@
+name: neon/advanced-card
+typeName: advancedcard
+group: Components
+prefixFields: true
+prefixType: full
+fields:
+  - identifier: cardGenaral    
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/advanced-card/language/labels.xlf:cardGenaral
+    type: Tab  
+  - identifier: advancedContent
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/advanced-card/language/labels.xlf:advancedContent
+    type: Palette    
+    fields:
+      - identifier: neon/card-fields   
+        type: Basic
+  - identifier: advancedLink
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/advanced-card/language/labels.xlf:advancedLink
+    type: Tab    
+  - identifier: advancedColor
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/advanced-card/language/labels.xlf:advancedColor
+    type: Palette
+    fields:
+      - identifier: neon/color-picker
+        type: Basic
+  - identifier: advancedButton
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/advanced-card/language/labels.xlf:advancedButton
+    type: Palette
+    fields:
+      - identifier: neon/button-fields
+        type: Basic
+  - identifier: advancedList
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/advanced-card/language/labels.xlf:advancedList
+    type: Palette
+    fields:
+      - identifier: neon/list-field
+        type: Basic 
+  

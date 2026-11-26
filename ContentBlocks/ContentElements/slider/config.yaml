@@ -1,0 +1,57 @@
+name: neon/slider
+typeName: slider
+group: Components
+prefixFields: true
+prefixType: full
+fields:
+  - identifier: header
+    useExistingField: true
+
+  - identifier: sliderType
+    label: "Slider type"
+    type: Select
+    renderType: selectSingle
+    default: fullwidth
+    items:
+      - label: "Full width slider"
+        value: fullwidth
+      - label: "Content slider (3 items)"
+        value: multi
+      - label: "Thumbnail slider"
+        value: thumbs
+
+  - identifier: slides
+    label: "Slides"
+    type: Collection
+    labelField: slideHeadline
+    minitems: 1
+    appearance:
+      collapseAll: true
+      useSortable: true
+    fields:
+      - identifier: slideImage
+        label: "Image"
+        type: File
+        allowed: common-image-types
+        maxitems: 1
+        relationship: manyToOne
+      - identifier: slideImageAfter
+        label: "After image (only for before / after)"
+        description: "The normal image is shown as 'before', this one as 'after'. Use images with the same size and framing."
+        type: File
+        allowed: common-image-types
+        maxitems: 1
+        relationship: manyToOne
+      - identifier: slideHeadline
+        label: "Headline"
+        type: Text
+      - identifier: slideText
+        label: "Text"
+        type: Textarea
+        rows: 3
+      - identifier: slideButtonText
+        label: "Button text"
+        type: Text
+      - identifier: slideLink
+        label: "Button link"
+        type: Link

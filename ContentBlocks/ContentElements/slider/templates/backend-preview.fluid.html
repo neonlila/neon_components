@@ -1,0 +1,60 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Preview" />
+
+<f:section name="Content">
+  <f:asset.css identifier="testimonials-preview" href="{cb:assetPath()}/preview.css" />
+
+  <f:variable name="count" value="{data.slides -> f:count()}" />
+
+  <div class="cb-tm-preview">
+    <p class="cb-tm-preview__meta">
+      <span class="cb-tm-preview__badge">
+        <f:if condition="{data.slides}" then="Slider" else="Grid" />
+      </span>
+      {count} <f:if condition="{count} == 1" then="Slide" else="Slider" />
+    </p>
+
+    <f:if condition="{count}">
+      <f:then>
+        <ul class="cb-tm-preview__list">
+          <f:for each="{data.slides}" as="item" iteration="i">
+            <f:if condition="{i.index} < 4">
+              <li class="cb-tm-preview__item">
+                <f:if condition="{item.slideImage}">
+                  <f:then>
+                    <f:image class="cb-tm-preview__avatar" image="{item.slideImage}" width="64c" height="64c" alt="" />
+                  </f:then>
+                  <f:else>
+                    <span class="cb-tm-preview__avatar cb-tm-preview__avatar--initial">{item.slideHeadline -> f:format.crop(maxCharacters: 1, append: '', respectWordBoundaries: false)}</span>
+                  </f:else>
+                </f:if>
+                <f:if condition="{item.slideImageAfter}">
+                    <f:then>
+                        <f:image class="cb-tm-preview__avatar" image="{item.slideImageAfter}" width="64c" height="64c" alt="" />
+                    </f:then>
+                    <f:else></f:else>
+                </f:if>
+                <span class="cb-tm-preview__text">
+                  <strong>{item.slideHeadline}</strong>
+                  <span class="cb-tm-preview__comment">„{item.slideText -> f:format.crop(maxCharacters: 110)}“</span>
+                </span>
+              </li>
+            </f:if>
+          </f:for>
+        </ul>
+
+        <f:if condition="{count} > 4">
+          <p class="cb-tm-preview__more">+ {count - 4} more</p>
+        </f:if>
+      </f:then>
+      <f:else>
+        <p class="cb-tm-preview__empty">No slides added yet.</p>
+      </f:else>
+    </f:if>
+  </div>
+</f:section>
+
+</html>

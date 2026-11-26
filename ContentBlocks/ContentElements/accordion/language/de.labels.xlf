@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+        <file datatype="plaintext" original="message" source-language="en" target-language="de" date="2026-11-16T10:08:43+00:00" product-name="neon/accordion">
+                <header/>
+                <body>
+                  <trans-unit id="title">
+                    <source>Accordion</source>
+                    <target>Akkordeon</target>
+                  </trans-unit>
+                  <trans-unit id="description">
+                    <source>Toggle between hiding and showing large amount of content</source>
+                    <target>Elemente werden ein/ausgeklappt</target>
+                  </trans-unit>
+                  <trans-unit id="accordion_items">
+                    <source>Accordion Items</source>
+                    <target>Elemente</target>
+                  </trans-unit>
+                  <trans-unit id="accordion_headline">
+                    <source>Header</source>
+                    <target>Überschift</target>
+                  </trans-unit>
+                  <trans-unit id="accordion_headline.description">
+                    <source>This headline is used to navigation the accordion</source>
+                    <target>Diese Überschrift wird für das Navigieren des Akkodeons genutzt</target>
+                  </trans-unit>
+                  <trans-unit id="accordion_content">
+                    <source>Content</source>
+                    <target>Content</target>
+                  </trans-unit>
+                </body>
+        </file>
+</xliff>

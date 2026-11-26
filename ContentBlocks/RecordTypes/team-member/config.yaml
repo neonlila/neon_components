@@ -1,0 +1,65 @@
+name: neon/team-member
+table: neon_team_member
+labelField: teamFirstname
+softDelete: true
+prefixFields: false
+fields:
+  - identifier: teamGeneral
+    type: Tab
+    label: "Team General"
+  - identifier: teamAvatar
+    type: File
+    label: "Team avatar"
+    maxitems: 1
+    relationship: manyToOne
+    allowed: common-image-types
+  - identifier: teamFirstname
+    type: Text
+    label: "Firstname"
+  - identifier: teamLastname
+    type: Text
+    label: "Lastname"
+  - identifier: teamPosition
+    type: Text
+    label: "Position"
+  - identifier: teamCompany
+    type: Text
+    label: "Company"
+  - identifier: teamDepartment
+    type: Select
+    renderType: selectSingle
+    label: "Department"
+    foreign_table: tx_neon_team_department
+    foreign_table_where: 'AND {#tx_neon_team_department}.{#pid} = ###CURRENT_PID###'
+    sortItems:
+      label: asc
+    items:
+      - label: "– no department –"
+        value: 0  
+  - identifier: teamAddress
+    type: Tab
+    label: "Team address"
+  - identifier: teamStreet
+    type: Text
+    label: "Street + nr."
+  - identifier: teamCity
+    type: Text
+    label: "City"
+  - identifier: teamZip
+    type: Text
+    label: "ZIP"
+  - identifier: teamContact
+    type: Tab
+    label: "Team contact"  
+  - identifier: teamEmail
+    type: Email
+    label: "Email"
+    placeholder: 'Enter your email address'
+  - identifier: teamPhone
+    type: Text
+    label: "Phone"       
+  - identifier: teamLinkedin
+    type: Link
+    label: "Linkedin link"        
+
+    

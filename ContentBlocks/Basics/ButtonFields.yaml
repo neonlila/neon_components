@@ -1,0 +1,34 @@
+identifier: neon/button-fields
+fields:
+  - identifier: buttonText
+    type: Text
+    label: "Button Text"
+    description: "Display text of a button"
+  - identifier: buttonLink
+    type: Link
+    label: "Button Link / Target"
+    description: "Link of the button"
+  - identifier: buttonVariant
+    label: "Button Color"
+    description: "Preset button variant"
+    type: Select
+    renderType: selectSingle
+    default: "primary"
+    items:
+      - label: "Primary"
+        value: "primary"
+      - label: "Secondary"
+        value: "secondary"
+      - label: "Outline"
+        value: "outline-primary"
+  - identifier: buttonSize
+    label: "Button Size"
+    description: "Preset button size"
+    type: Select
+    renderType: selectSingle
+    default: "sm"
+    items:
+      - label: "Large"
+        value: "lg"
+      - label: "Small"
+        value: "sm"

@@ -1,0 +1,18 @@
+identifier: neon/link-field
+fields:
+  - identifier: linkText
+    type: Text
+    label: "Link Text"
+  - identifier: linkUrl
+    type: Link
+    label: "Link / Target"
+  - identifier: linkIconon
+    label: "Activate Icon"
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0
+    onChange: reload
+  - identifier: linkIconon
+    displayCond: 'FIELD:linkIconon:=:1'
+    label: "Link icon"
+    type: File

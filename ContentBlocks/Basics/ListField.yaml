@@ -1,0 +1,15 @@
+identifier: neon/list-field
+fields:
+  - identifier: list_items
+    type: Collection
+    label: "List items"
+    maxitems: 4
+    minitems: 0
+    labelField: listText
+    appearance:
+      collapseAll: true
+      levelLinksPosition: both
+    fields:
+      - identifier: listText
+        type: Text
+        label: "List item"

@@ -1,0 +1,56 @@
+name: neon/accordion
+group: Components
+title: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:title
+description: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:description
+fields:
+  - identifier: open_first
+    type: Checkbox
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:open_first.label
+    default: 0
+  - identifier: single_open
+    type: Checkbox
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:single_open.label
+    default: 0
+  - identifier: panels
+    type: Collection
+    label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:panels.label
+    minitems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:panels.title.label
+        required: true
+      - identifier: text
+        type: Textarea
+        label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:panels.text.label
+        enableRichtext: true
+      - identifier: list_ordered
+        type: Checkbox
+        label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:panels.list_ordered.label
+        default: 0
+      - identifier: list_items
+        type: Collection
+        label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:panels.list_items.label
+        fields:
+          - identifier: text
+            type: Text
+            label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:panels.list_items.text.label
+            required: true
+      - identifier: button_label
+        type: Text
+        label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:panels.button_label.label
+      - identifier: button_link
+        type: Link
+        label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:panels.button_link.label
+      - identifier: button_variant
+        type: Select
+        label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:panels.button_variant.label
+        renderType: selectSingle
+        default: primary
+        items:
+          - label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:panels.button_variant.items.primary.label
+            value: primary
+          - label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:panels.button_variant.items.secondary.label
+            value: secondary
+          - label: LLL:EXT:neon_components/ContentBlocks/ContentElements/accordion/language/labels.xlf:panels.button_variant.items.ghost.label
+            value: ghost

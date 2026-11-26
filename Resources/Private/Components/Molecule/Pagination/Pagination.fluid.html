@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:argument name="pagination" type="array" />
+<f:argument name="section" type="string" optional="1" />
+
+<nav class="pagination" aria-label="Pagination">
+  <ul class="pagination__list">
+    <f:if condition="{pagination.previous}">
+      <li>
+        <a class="pagination__link pagination__link--prev" href="{f:uri.page(additionalParams: pagination.previous.params, section: section)}" aria-label="Previous page" data-ajax-link>‹</a>
+      </li>
+    </f:if>
+    <f:for each="{pagination.pages}" as="page">
+      <li>
+        <a class="pagination__link"
+           href="{f:uri.page(additionalParams: page.params, section: section)}"
+           aria-current="{f:if(condition: page.current, then: 'page', else: 'false')}"
+           data-ajax-link>{page.number}</a>
+      </li>
+    </f:for>
+    <f:if condition="{pagination.next}">
+      <li>
+        <a class="pagination__link pagination__link--next" href="{f:uri.page(additionalParams: pagination.next.params, section: section)}" aria-label="Next page" data-ajax-link>›</a>
+      </li>
+    </f:if>
+  </ul>
+</nav>
+
+</html>

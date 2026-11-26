@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:argument name="id" type="string" />
+<f:argument name="label" type="string" />
+<f:argument name="class" type="string" optional="{true}" default="" />
+<f:argument name="perPage" type="int" optional="{true}" default="3" />
+<f:argument name="perPageTablet" type="int" optional="{true}" default="2" />
+<f:argument name="perPageMobile" type="int" optional="{true}" default="1" />
+<f:argument name="gap" type="string" optional="{true}" default="1.75rem" />
+<f:argument name="peek" type="bool" optional="{true}" default="{true}" />
+<f:argument name="arrows" type="bool" optional="{true}" default="{true}" />
+<f:argument name="pagination" type="bool" optional="{true}" default="{true}" />
+<f:argument name="loop" type="bool" optional="{true}" default="{false}" />
+<f:argument name="autoplay" type="int" optional="{true}" default="0" />
+
+<f:asset.css identifier="splide-core" href="EXT:neon_components/Resources/Public/Vendor/Splide/splide-core.min.css" />
+<f:asset.css identifier="slider" href="EXT:neon_components/Resources/Public/Css/Components/Slider.css" />
+
+<section class="slider splide {class}"
+         id="{id}"
+         aria-label="{label}"
+         data-slider
+         data-slider-per-page="{perPage}"
+         data-slider-per-page-tablet="{perPageTablet}"
+         data-slider-per-page-mobile="{perPageMobile}"
+         data-slider-gap="{gap}"
+         data-slider-peek="{f:if(condition: peek, then: '1', else: '0')}"
+         data-slider-arrows="{f:if(condition: arrows, then: '1', else: '0')}"
+         data-slider-pagination="{f:if(condition: pagination, then: '1', else: '0')}"
+         data-slider-loop="{f:if(condition: loop, then: '1', else: '0')}"
+         data-slider-autoplay="{autoplay}">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <f:slot />
+    </ul>
+  </div>
+</section>
+
+<f:asset.script identifier="splide" src="EXT:neon_components/Resources/Public/Vendor/Splide/splide.min.js" defer="1" />
+<f:asset.script identifier="slider" src="EXT:neon_components/Resources/Public/JavaScript/Components/Slider.js" defer="1" />
+
+</html>

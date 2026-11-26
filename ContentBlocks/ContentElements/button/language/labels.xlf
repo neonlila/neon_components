@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" date="2026-11-26T20:14:50+00:00" product-name="neon/button">
+    <header/>
+    <body>
+      <trans-unit id="title">
+        <source>Button</source>
+      </trans-unit>
+      <trans-unit id="description">
+        <source>Simple button element with options</source>
+      </trans-unit>
+      <trans-unit id="buttonText.label">
+        <source>Button Text</source>
+      </trans-unit>
+      <trans-unit id="buttonText.description">
+        <source>Display text of a button</source>
+      </trans-unit>
+      <trans-unit id="buttonLink.label">
+        <source>Button Link / Target</source>
+      </trans-unit>
+      <trans-unit id="buttonLink.description">
+        <source>Link of the button</source>
+      </trans-unit>
+      <trans-unit id="buttonVariant.label">
+        <source>Button Color</source>
+      </trans-unit>
+      <trans-unit id="buttonVariant.description">
+        <source>Preset button variant</source>
+      </trans-unit>
+      <trans-unit id="buttonVariant.items.primary.label">
+        <source>Primary</source>
+      </trans-unit>
+      <trans-unit id="buttonVariant.items.secondary.label">
+        <source>Secondary</source>
+      </trans-unit>
+      <trans-unit id="buttonVariant.items.outline-primary.label">
+        <source>Outline</source>
+      </trans-unit>
+      <trans-unit id="buttonSize.label">
+        <source>Button Size</source>
+      </trans-unit>
+      <trans-unit id="buttonSize.description">
+        <source>Preset button size</source>
+      </trans-unit>
+      <trans-unit id="buttonSize.items.lg.label">
+        <source>Large</source>
+      </trans-unit>
+      <trans-unit id="buttonSize.items.sm.label">
+        <source>Small</source>
+      </trans-unit>
+      <trans-unit id="iconVariant.label">
+        <source>Icon</source>
+      </trans-unit>
+      <trans-unit id="iconVariant.description">
+        <source>Preset icon variants</source>
+      </trans-unit>
+      <trans-unit id="iconVariant.items.label">
+        <source>None</source>
+      </trans-unit>
+      <trans-unit id="iconVariant.items.check.label">
+        <source>Check</source>
+      </trans-unit>
+      <trans-unit id="iconVariant.items.arrow-right.label">
+        <source>Arrow right</source>
+      </trans-unit>
+      <trans-unit id="iconVariant.items.download.label">
+        <source>Download</source>
+      </trans-unit>
+      <trans-unit id="iconVariant.items.caret-right-fill.label">
+        <source>Caret right</source>
+      </trans-unit>
+      <trans-unit id="iconVariant.items.facebook.label">
+        <source>Facebook round</source>
+      </trans-unit>
+      <trans-unit id="iconVariant.items.instagram.label">
+        <source>Instagram round</source>
+      </trans-unit>
+      <trans-unit id="iconVariant.items.linkedin.label">
+        <source>LinkedIn</source>
+      </trans-unit>
+      <trans-unit id="iconVariant.items.whatsapp.label">
+        <source>WhatsApp</source>
+      </trans-unit>
+      <trans-unit id="iconPosition.label">
+        <source>Icon position</source>
+      </trans-unit>
+      <trans-unit id="iconPosition.description">
+        <source>Position your icon before/after the text</source>
+      </trans-unit>
+      <trans-unit id="iconPosition.items.after.label">
+        <source>After text</source>
+      </trans-unit>
+      <trans-unit id="iconPosition.items.before.label">
+        <source>Before text</source>
+      </trans-unit>
+      <trans-unit id="buttonSettings">
+        <source>Button settings</source>
+      </trans-unit>
+      <trans-unit id="iconSettings">
+        <source>Icon settings</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

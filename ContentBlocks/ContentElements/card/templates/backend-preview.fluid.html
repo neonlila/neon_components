@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Preview" />
+
+<f:section name="Content">
+
+<div class="cb-tm-preview">
+    <p class="cb-tm-preview__meta">
+      <span class="cb-tm-preview__badge">
+        <f:if condition="{data.cardTitle}" then="Cards & Layouts" else="Grid" />
+      </span>
+    </p>
+    <ul class="cb-tm-preview__list">
+        <li class="cb-tm-preview__item">
+            <f:if condition="{data.cardImage.0}">
+                <f:then>
+                    <f:image class="cb-tm-preview__avatar" image="{data.cardImage.0}" width="64c" height="64c" alt="" />
+                </f:then>
+                <f:else>
+                    <span class="cb-tm-preview__avatar cb-tm-preview__avatar--initial">{data.cardTitle}</span>
+                </f:else>
+            </f:if>
+            <span class="cb-tm-preview__text">
+                <strong>{data.cardTitle}</strong>
+                <f:if condition="{item.testCompany}">
+                    <span class="cb-tm-preview__company">· {data.cardVariant}</span>
+                </f:if>
+                <span class="cb-tm-preview__comment">„{data.cardText -> f:format.stripTags()}“</span>
+            </span>
+        </li>
+    </ul>
+</div>
+
+</f:section>
+
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" date="2026-11-26T20:14:50+00:00" product-name="neon/team-member">
+    <header/>
+    <body>
+      <trans-unit id="title">
+        <source>neon/team-member</source>
+      </trans-unit>
+      <trans-unit id="tabs.teamGeneral">
+        <source>Team General</source>
+      </trans-unit>
+      <trans-unit id="teamAvatar.label">
+        <source>Team avatar</source>
+      </trans-unit>
+      <trans-unit id="teamFirstname.label">
+        <source>Firstname</source>
+      </trans-unit>
+      <trans-unit id="teamLastname.label">
+        <source>Lastname</source>
+      </trans-unit>
+      <trans-unit id="teamPosition.label">
+        <source>Position</source>
+      </trans-unit>
+      <trans-unit id="teamCompany.label">
+        <source>Company</source>
+      </trans-unit>
+      <trans-unit id="teamDepartment.label">
+        <source>Department</source>
+      </trans-unit>
+      <trans-unit id="teamDepartment.items.0.label">
+        <source>– no department –</source>
+      </trans-unit>
+      <trans-unit id="tabs.teamAddress">
+        <source>Team address</source>
+      </trans-unit>
+      <trans-unit id="teamStreet.label">
+        <source>Street + nr.</source>
+      </trans-unit>
+      <trans-unit id="teamCity.label">
+        <source>City</source>
+      </trans-unit>
+      <trans-unit id="teamZip.label">
+        <source>ZIP</source>
+      </trans-unit>
+      <trans-unit id="tabs.teamContact">
+        <source>Team contact</source>
+      </trans-unit>
+      <trans-unit id="teamEmail.label">
+        <source>Email</source>
+      </trans-unit>
+      <trans-unit id="teamEmail.placeholder">
+        <source>Enter your email address</source>
+      </trans-unit>
+      <trans-unit id="teamPhone.label">
+        <source>Phone</source>
+      </trans-unit>
+      <trans-unit id="teamLinkedin.label">
+        <source>Linkedin link</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

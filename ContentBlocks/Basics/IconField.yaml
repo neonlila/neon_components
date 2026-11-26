@@ -1,0 +1,43 @@
+identifier: neon/icon-field
+fields:
+  - identifier: iconPalatte
+    type: Palette
+    label: "Icon configuration"
+    description: "Setup your icon, if needed"
+  - identifier: iconVariant
+    type: Select
+    renderType: selectSingle
+    label: "Icon"
+    description: "Preset icon variants"
+    default: ""
+    onChange: reload
+    items:
+      - label: "None"
+        value: ""
+      - label: "Check"
+        value: "check"
+      - label: "Arrow right"
+        value: "arrow-right"
+      - label: "Download"
+        value: "download"
+      - label: "Caret right"
+        value: "caret-right-fill"
+      - label: "Facebook round"
+        value: "facebook"
+      - label: "Instagram round"
+        value: "instagram"
+      - label: "LinkedIn"
+        value: "linkedin"  
+      - label: "WhatsApp"
+        value: "whatsapp"
+  - identifier: iconPosition
+    displayCond: 'FIELD:iconVariant:!=:'
+    label: "Icon position"
+    description: "Position your icon before/after the text"
+    type: Select
+    renderType: selectSingle
+    items:
+      - label: "After text"
+        value: "after"
+      - label: "Before text"
+        value: "before"

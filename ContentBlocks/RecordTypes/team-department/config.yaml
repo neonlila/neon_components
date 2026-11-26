@@ -1,0 +1,10 @@
+name: neon/team-department
+table: neon_team_department
+labelField: departmentTitle
+softDelete: true
+prefixFields: false
+fields:
+  - identifier: departmentTitle
+    type: Text
+    label: "Department"
+    required: true

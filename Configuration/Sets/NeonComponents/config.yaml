@@ -1,8 +1,5 @@
 name: 'neon/neon-components'
-label: 'neon-components'
+label: 'Neon components'
 dependencies:
   - typo3/fluid-styled-content
   - typo3/fluid-styled-content-css
-
-settings:
-  # ... rest of your settings

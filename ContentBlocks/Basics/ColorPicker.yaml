@@ -1,0 +1,20 @@
+identifier: neon/color-picker
+fields:
+  - identifier: colorPicker
+    type: Select
+    renderType: selectSingle
+    label: "Color / background"
+    default: "none"
+    items: 
+      - label: "None"
+        value: "none"
+      - label: "Main color"
+        value: "text-bg-primary"
+      - label: "Second color"
+        value: "text-bg-secondary"
+      - label: "Green"
+        value: "text-bg-success"
+      - label: "White"
+        value: "text-bg-light"
+      - label: "Black"
+        value: "text-bg-dark"  

@@ -1,0 +1,114 @@
+.slider {
+  --slider-accent: #0e6f8f;
+  --slider-dot: #c9d3dd;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "track track"
+    "pagination arrows";
+  align-items: center;
+  row-gap: .75rem;
+}
+
+.slider .splide__track {
+  grid-area: track;
+  padding-block: .5rem 1rem; /* room for card shadows */
+}
+
+/* equal-height slides */
+.slider .splide__slide {
+  display: flex;
+}
+
+.slider .splide__slide > * {
+  width: 100%;
+}
+
+/* Arrows */
+.slider .splide__arrows {
+  grid-area: arrows;
+  display: flex;
+  gap: .75rem;
+}
+
+.slider .splide__arrow {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1.5px solid var(--slider-accent);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--slider-accent);
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, opacity .2s ease;
+}
+
+.slider .splide__arrow svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.slider .splide__arrow--prev svg {
+  transform: scaleX(-1);
+}
+
+.slider .splide__arrow:hover:not(:disabled) {
+  background: var(--slider-accent);
+  color: #fff;
+}
+
+.slider .splide__arrow:disabled {
+  opacity: .35;
+  cursor: default;
+}
+
+/* Dots */
+.slider .splide__pagination {
+  grid-area: pagination;
+  justify-content: flex-start;
+  gap: .5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.slider .splide__pagination__page {
+  display: block;
+  width: .6rem;
+  height: .6rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--slider-dot);
+  cursor: pointer;
+  transition: width .25s ease, background-color .25s ease;
+}
+
+.slider .splide__pagination__page.is-active {
+  width: 1.75rem;
+  background: var(--slider-accent);
+}
+
+/* Focus */
+.slider .splide__arrow:focus-visible,
+.slider .splide__pagination__page:focus-visible,
+.slider .splide__slide:focus-visible {
+  outline: 3px solid var(--slider-accent);
+  outline-offset: 3px;
+}
+
+/* Everything fits in view: no arrows, no dots */
+.slider:not(.is-overflow) .splide__arrows,
+.slider:not(.is-overflow) .splide__pagination {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slider .splide__arrow,
+  .slider .splide__pagination__page {
+    transition: none;
+  }
+}
